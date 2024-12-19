@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Registration Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>House Registration Form</h2>
+        <form action="/" method="get" id="registrationForm">
+            <!-- House Number -->
+            <div class="form-group">
+                <label for="houseNumber">House Number</label>
+                <input type="text" id="houseNumber" name="houseNumber" placeholder="Enter house number" required>
+            </div>
+
+            <!-- Owner Name -->
+            <div class="form-group">
+                <label for="ownerName">Owner Name</label>
+                <input type="text" id="ownerName" name="ownerName" placeholder="Enter owner name" required>
+            </div>
+
+            <!-- Location -->
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" placeholder="Enter location" required>
+            </div>
+
+            <!-- Date of Registration -->
+            <div class="form-group">
+                <label for="registrationDate">Date of Registration</label>
+                <input type="date" id="registrationDate" name="registrationDate" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        // Array to store form submissions
+        const formDataArray = [];
+
+        // Add event listener to the form
+        document.querySelector('form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission behavior
+
+            // Get form values
+            const houseNumber = document.getElementById('houseNumber').value;
+            const ownerName = document.getElementById('ownerName').value;
+            const location = document.getElementById('location').value;
+            const registrationDate = document.getElementById('registrationDate').value;
+
+            // Create an object with form data
+            const formData = {
+                houseNumber: houseNumber,
+                ownerName: ownerName,
+                location: location,
+                registrationDate: registrationDate
+            };
+
+            // Push the data to the array
+            formDataArray.push(formData);
+
+            // Display the array in console
+            console.log("Form Data Array:", formDataArray);
+
+            // Optional: Alert the user or reset the form
+            alert("Form submitted successfully!");
+            document.querySelector('form').reset();
+        });
+    </script>
+</body>
+</html>

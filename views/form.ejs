@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Registration Form</title>
+    <link rel="stylesheet" href="/CSS/form.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>House Registration Form</h2>
+        <form action="/check" method="post" id="registrationForm">
+            <!-- House Number -->
+            <div class="form-group">
+                <label for="houseNumber">House Number</label>
+                <input type="text" id="houseNumber" name="houseNumber" placeholder="Enter house number" required>
+            </div>
+
+            <!-- Owner Name -->
+            <div class="form-group">
+                <label for="ownerName">Owner Name</label>
+                <input type="text" id="ownerName" name="ownerName" placeholder="Enter owner name" required>
+            </div>
+
+            <!-- Location -->
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" placeholder="Enter location" required>
+            </div>
+
+            <!-- Date of Registration -->
+            <div class="form-group">
+                <label for="registrationDate">Date of Registration</label>
+                <input type="text" placeholder="Enter Date (yyyy-mm-dd)" id="registrationDate" name="dateOfRegistration" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-button">Check Details</button>
+        </form>
+    </div>
+
+<script src="/JS/script.js"></script>
+</body>
+</html>
